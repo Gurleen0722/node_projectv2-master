@@ -17,6 +17,14 @@ app.get('/home',(req,res) =>{
 app.post('/user/:id', (req, res) =>{
     const user_id = req.params.id;
     res.send(`The user id is: ${user_id}`);
+
+});
+
+
+//route handler for query parameters
+app.get('/search', (req, res) =>{
+    const query = req.query.q;
+res.send(`This is the search term entered: ${query}`);
 });
 
 //Start our server
