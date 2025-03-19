@@ -13,7 +13,11 @@ const PORT = process.env.PORT;
 app.get('/home',(req,res) =>{
     res.send('Hello,world!');
 });
-
+//router handler that user post. post creats resourecs
+app.post('/user/:id', (req, res) =>{
+    const user_id = req.params.id;
+    res.send(`The user id is: ${user_id}`);
+});
 
 //Start our server
 app.listen(PORT, () =>{
